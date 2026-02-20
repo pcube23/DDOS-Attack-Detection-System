@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Inspector - DDoS Detector{% endblock %}
+{% block content %}
+<h2>Packet Inspector</h2>
+<div class="filters card">
+  <label>Protocol
+    <select id="fProtocol">
+      <option value="">All</option>
+      <option>ICMP</option>
+      <option>TCP</option>
+      <option>UDP</option>
+    </select>
+  </label>
+  <label>Source IP <input id="fSrc" type="text" placeholder="e.g. 192.168.0.1" /></label>
+  <label>Destination IP <input id="fDst" type="text" placeholder="e.g. 10.0.0.2" /></label>
+  <button class="btn" id="applyFilters">Apply</button>
+  <div id="inspError" class="error"></div>
+  <p class="hint">Showing up to 1000 packets.</p>
+  <a class="btn ghost" href="/dashboard">Back to Dashboard</a>
+  </div>
+
+<div class="table-wrapper">
+  <table class="data-table mono" id="packetTable">
+    <thead>
+      <tr>
+        <th>Time</th><th>Src</th><th>Dst</th><th>Protocol</th><th>Length</th><th>Flags</th><th>Info</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  </div>
+{% endblock %}
+{% block scripts %}
+<script>
+  window.InspectorPage && window.InspectorPage();
+  </script>
+{% endblock %}
+
+

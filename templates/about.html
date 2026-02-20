@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% block title %}About - DDoS Detector{% endblock %}
+{% block content %}
+<h2>About DDoSGuard</h2>
+
+<div class="grid two">
+  <div class="card">
+    <h3>🛡️ What is a DDoS Attack?</h3>
+    <p>Distributed Denial of Service (DDoS) attacks overwhelm targets with massive traffic from multiple sources, rendering services unavailable to legitimate users. These attacks can cause significant downtime, financial losses, and damage to reputation.</p>
+    <p>Common attack types include:</p>
+    <ul>
+      <li><strong>SYN Floods:</strong> Overwhelming servers with TCP connection requests</li>
+      <li><strong>UDP Floods:</strong> Saturating bandwidth with UDP packets</li>
+      <li><strong>ICMP Echo Storms:</strong> Flooding networks with ping requests</li>
+      <li><strong>Amplification Attacks:</strong> Exploiting protocols to amplify attack traffic</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🔍 How We Detect It</h3>
+    <p>DDoSGuard uses advanced machine learning models combined with heuristic analysis to identify attack patterns in real-time network traffic.</p>
+    <p><strong>Detection Methods:</strong></p>
+    <ul>
+      <li>Protocol-specific ML models (ICMP, TCP, UDP)</li>
+      <li>Traffic pattern analysis and anomaly detection</li>
+      <li>Source/destination IP frequency analysis</li>
+      <li>Packet flag and behavior pattern recognition</li>
+      <li>Real-time alert generation with severity classification</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card gradient-border">
+  <h3>⚡ Key Features</h3>
+  <div class="features-grid">
+    <div class="card">
+      <h4>📊 Real-Time Analysis</h4>
+      <p>Continuous monitoring and analysis of network packet data with instant threat detection and alerting.</p>
+    </div>
+    <div class="card">
+      <h4>🤖 Machine Learning</h4>
+      <p>Advanced ML models trained to identify suspicious patterns and potential DDoS attack signatures.</p>
+    </div>
+    <div class="card">
+      <h4>📈 Comprehensive Reports</h4>
+      <p>Generate detailed PDF, CSV, and Excel reports with traffic analysis, alerts, and security insights.</p>
+    </div>
+    <div class="card">
+      <h4>🔬 Packet Inspector</h4>
+      <p>Deep dive into individual packets with advanced filtering and search capabilities for forensic analysis.</p>
+    </div>
+    <div class="card">
+      <h4>📱 Progressive Web App</h4>
+      <p>Install as a native app on any device with offline capabilities and seamless user experience.</p>
+    </div>
+    <div class="card">
+      <h4>🎨 Modern Interface</h4>
+      <p>Intuitive dashboard with interactive charts, real-time updates, and dark/light theme support.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>🛠️ Technologies Used</h3>
+  <div class="grid two">
+    <div>
+      <h4>Backend</h4>
+      <ul>
+        <li><strong>Flask:</strong> Python web framework for API and routing</li>
+        <li><strong>Pandas:</strong> Data manipulation and analysis</li>
+        <li><strong>scikit-learn:</strong> Machine learning model training and inference</li>
+        <li><strong>Scapy:</strong> Network packet parsing and analysis</li>
+        <li><strong>NumPy:</strong> Numerical computing and array operations</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Frontend</h4>
+      <ul>
+        <li><strong>Chart.js:</strong> Interactive data visualization</li>
+        <li><strong>Progressive Web App:</strong> Service workers and manifest for app-like experience</li>
+        <li><strong>Modern CSS:</strong> Glassmorphism, gradients, and responsive design</li>
+        <li><strong>Vanilla JavaScript:</strong> Lightweight, performant client-side logic</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>📋 Supported File Formats</h3>
+  <p>Upload and analyze network traffic data from various sources:</p>
+  <ul>
+    <li><strong>CSV Files:</strong> Packet data exported from network analysis tools</li>
+    <li><strong>PCAP Files:</strong> Standard packet capture format (.pcap)</li>
+    <li><strong>PCAPNG Files:</strong> Next-generation packet capture format (.pcapng)</li>
+  </ul>
+  <p class="muted">The system automatically detects file format and extracts relevant packet information including source/destination IPs, protocols, ports, flags, and timestamps.</p>
+</div>
+
+<div class="card">
+  <h3>🎯 Use Cases</h3>
+  <div class="grid two">
+    <div>
+      <h4>Network Security Teams</h4>
+      <p>Monitor network traffic for potential DDoS attacks and generate security reports for stakeholders.</p>
+    </div>
+    <div>
+      <h4>Security Analysts</h4>
+      <p>Investigate suspicious network activity, analyze attack patterns, and perform forensic analysis.</p>
+    </div>
+    <div>
+      <h4>IT Administrators</h4>
+      <p>Proactively identify and mitigate threats before they impact critical services.</p>
+    </div>
+    <div>
+      <h4>Security Researchers</h4>
+      <p>Study attack patterns, validate detection models, and contribute to threat intelligence.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>🔒 Privacy & Security</h3>
+  <p>DDoSGuard processes network packet data locally in your browser and on the server. All analysis is performed on uploaded files without transmitting data to third-party services. Session-based storage ensures your data remains private and secure.</p>
+  <p><strong>Data Handling:</strong></p>
+  <ul>
+    <li>Files are processed server-side and stored temporarily in session cache</li>
+    <li>No persistent storage of sensitive network data</li>
+    <li>All analysis results are session-scoped and cleared on logout</li>
+    <li>Generated reports contain only the data you choose to export</li>
+  </ul>
+</div>
+{% endblock %}
+
+

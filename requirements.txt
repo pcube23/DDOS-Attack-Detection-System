@@ -1,0 +1,10 @@
+flask
+pandas
+werkzeug
+fpdf
+flask-cors
+scikit-learn
+numpy
+scapy
+joblib
+openpyxl

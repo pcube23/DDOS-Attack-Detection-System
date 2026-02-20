@@ -1,0 +1,7 @@
+duration,src_bytes,wrong_fragment,count,urgent,num_compromised,srv_count
+4,1200,0,8,0,0,6
+12,5000,1,20,1,2,30
+7,800,0,15,0,1,10
+2,300,0,5,0,0,3
+18,9000,2,35,2,5,50
+10,1500,0,12,0,0,15

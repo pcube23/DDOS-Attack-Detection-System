@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Home - DDoS Detector{% endblock %}
+{% block content %}
+<section class="hero">
+  <canvas id="particles" class="particles"></canvas>
+  <h1>Detect and Analyze DDoS Attacks in Real-Time</h1>
+  <p class="tagline">Upload your ICMP, TCP, or UDP packet files and let AI do the rest.</p>
+  <a class="btn primary" href="/upload">Upload Now</a>
+</section>
+
+<section class="features-grid">
+  <div class="card">
+    <h3>Analyze CSV/PCAP Files</h3>
+    <p>Upload .csv, .pcap, or .pcapng for comprehensive parsing and detection.</p>
+  </div>
+  <div class="card">
+    <h3>Real-Time Visualization</h3>
+    <p>See traffic spikes and protocol distribution with interactive charts.</p>
+  </div>
+  <div class="card">
+    <h3>Intelligent Alerts</h3>
+    <p>Heuristic and ML-based detection of SYN floods, UDP floods, and ICMP storms.</p>
+  </div>
+  <div class="illustration"></div>
+  <div class="install-tip">Tip: Install this as an app via your browser menu.</div>
+  <a class="btn secondary" href="/dashboard">Go to Dashboard</a>
+  <a class="btn ghost" href="/about">Learn More</a>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+  window.HomePage && window.HomePage();
+  </script>
+{% endblock %}
+
+

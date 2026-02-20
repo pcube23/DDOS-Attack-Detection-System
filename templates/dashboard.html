@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard - DDoS Detector{% endblock %}
+{% block content %}
+<h2>Dashboard</h2>
+<div class="grid">
+  <div class="card kpi" id="kpi-total">Total Packets: -</div>
+  <div class="card kpi" id="kpi-duration">Duration: -</div>
+  <div class="card kpi" id="kpi-ratio">ICMP/TCP/UDP: -</div>
+  <div class="card kpi" id="kpi-unique">Active Connections: -</div>
+</div>
+
+<div class="grid two">
+  <div class="card">
+    <h3>Packets per second</h3>
+    <canvas id="trafficChart" height="120"></canvas>
+  </div>
+  <div class="card">
+    <h3>Top Sources</h3>
+    <canvas id="topSources" height="120"></canvas>
+  </div>
+</div>
+
+<div class="grid two">
+  <div class="card">
+    <h3>Top Destinations</h3>
+    <canvas id="topDests" height="120"></canvas>
+  </div>
+  <div class="card">
+    <h3>Alerts</h3>
+    <ul id="alertList" class="alert-list"></ul>
+  </div>
+</div>
+
+<div class="controls card">
+  <label>Sensitivity <input type="range" min="1" max="5" value="3" /></label>
+  <button class="btn" id="downloadPdf">Download PDF</button>
+  <button class="btn" id="downloadPdfCustom">Custom PDF...</button>
+  <button class="btn" id="downloadCsv">Download CSV</button>
+  <button class="btn" id="downloadXlsx">Download XLSX</button>
+  <button class="btn secondary" id="toggleLive">Enable Live Mode</button>
+  <a class="btn secondary" href="/inspector">Packet Inspector</a>
+  <a class="btn ghost" href="/upload">Upload More</a>
+  <div id="dashError" class="error" style="display: none;"></div>
+</div>
+
+<div class="card gradient-border">
+  <h3>Live Stream</h3>
+  <div id="liveLog" class="log-console" aria-live="polite"></div>
+  <small class="muted">Simulated real-time packet log feed.</small>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+  window.DashboardPage && window.DashboardPage();
+  </script>
+{% endblock %}
+
+

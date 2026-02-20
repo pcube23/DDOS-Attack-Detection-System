@@ -1,0 +1,7 @@
+time,src,dst,protocol,length,flags,info,src_port,dst_port,icmp_type
+1730803200,192.168.0.10,10.0.0.5,ICMP,84,,Echo (ping) request,,,8
+1730803201,192.168.0.11,10.0.0.5,ICMP,98,,Echo (ping) request,,,8
+1730803202,192.168.0.12,10.0.0.6,ICMP,72,,Echo (ping) reply,,,0
+1730803203,192.168.0.13,10.0.0.6,ICMP,84,,Echo (ping) request,,,8
+1730803204,192.168.0.10,10.0.0.7,ICMP,84,,Echo (ping) request,,,8
+

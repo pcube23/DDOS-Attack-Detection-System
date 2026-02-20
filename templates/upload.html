@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Upload - DDoS Detector{% endblock %}
+{% block content %}
+<h2>Upload Packet Files</h2>
+<p>Supported: .csv, .pcap, .pcapng</p>
+
+<div id="dropzone" class="dropzone">
+  <p>Drag & drop files here or click to browse</p>
+  <input id="fileInput" type="file" multiple accept=".csv,.pcap,.pcapng" />
+  <div id="fileList"></div>
+  <div id="progress" class="progress"><div id="bar"></div></div>
+  <div class="actions">
+    <button id="analyzeBtn" class="btn primary">Analyze Now</button>
+    <button id="resetBtn" class="btn ghost">Reset</button>
+  </div>
+  <div id="summary" class="summary-cards"></div>
+  <div id="alerts" class="alerts"></div>
+  <div id="uploadedFiles" class="uploads"></div>
+  <div id="error" class="error"></div>
+  <a id="gotoDashboard" class="btn secondary" href="/dashboard" style="display:none">Go to Dashboard</a>
+  </div>
+{% endblock %}
+{% block scripts %}
+<script>
+  window.UploadPage && window.UploadPage();
+  </script>
+{% endblock %}
+
+
